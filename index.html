@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tree Plantation Drive</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(to bottom, #d4f7d4, #ffffff);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: green;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .box {
+      background: white;
+      padding: 20px;
+      margin: 15px auto;
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Leaf animation */
+    .leaf {
+      position: absolute;
+      top: -50px;
+      color: green;
+      font-size: 20px;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  🌱 Tree Plantation Drive 🌱
+</header>
+
+<section>
+  <div class="box">
+    <h2>Welcome</h2>
+    <p>Let’s save nature by planting more trees and making Earth green and clean.</p>
+  </div>
+
+  <div class="box">
+    <h2>About Project</h2>
+    <p>This project is created to spread awareness about tree plantation and environment protection.</p>
+  </div>
+
+  <div class="box">
+    <h2>Contact</h2>
+    <p>Email: treeplantation@gmail.com</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Tree Plantation Drive | College Project
+</footer>
+
+<script>
+  function createLeaf() {
+    const leaf = document.createElement("div");
+    leaf.classList.add("leaf");
+    leaf.innerHTML = "🍃";
+
+    leaf.style.left = Math.random() * window.innerWidth + "px";
+    leaf.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+    document.body.appendChild(leaf);
+
+    setTimeout(() => {
+      leaf.remove();
+    }, 5000);
+  }
+
+  setInterval(createLeaf, 300);
+</script>
+
+</body>
+      </html>
